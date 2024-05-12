@@ -34,4 +34,16 @@ height_conver = float(height)
 weight_conver = int(weight)
 
 bmi = weight_conver / height_conver **2
-print("Your Body Mass Index is: " + int(bmi))
+
+bmi_int = int(bmi)
+
+if bmi_int >= 30:
+    print("Your Body Mass Index is: " + str(bmi_int) + " You are Obese!")
+elif bmi_int >=25 or bmi_int <=29.9:
+        print("Your Body Mass Index is: " + str(bmi_int) + " You are Overweight!")
+elif bmi_int >= 18.5 or bmi_int <=24.9:
+        print("Your Body Mass Index is: " + str(bmi_int) + " You are Obese!")
+else:
+        print("Your Body Mass Index is: " + str(bmi_int) + " You are Obese!")
+
+
