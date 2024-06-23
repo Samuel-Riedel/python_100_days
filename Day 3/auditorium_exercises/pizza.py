@@ -5,6 +5,7 @@ extra_cheese = input("Do you want extra cheese? Y or N○\n").upper() # Do you w
 # 🚨 Don't change the code above 👆
 # Write your code below this line 👇
 bill = 0
+
 if size == "S":
   bill += 15
   if add_pepperoni == "Y":
