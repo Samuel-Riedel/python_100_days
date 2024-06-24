@@ -1,9 +1,11 @@
 print("The Love Calculator is calculating your score...")
-name1 = input().lower() # What is your name?
-name2 = input().lower() # What is their name?
+name1 = input("What is your name? \n") # What is your name?
+name2 = input("What is their name?\n") # What is their name?
 # 🚨 Don't change the code above 👆
 # Write your code below this line 👇
 
+name1 = name1.lower()
+name2 = name2.lower()
 
 t = name1.count("t")
 r = name1.count("r")
@@ -33,8 +35,12 @@ loveSum2 = l+o+v+e
 
 loveNumber = str(loveSum1 + loveSum2)
 
-c
+mergedNumbers = int(trueNumber+loveNumber)
 
-print(trueNumber+loveNumber)
-
+if mergedNumbers < 10 or mergedNumbers > 90:
+  print(f"Your score is {mergedNumbers}, you go together like coke and mentos.")
+elif mergedNumbers >=40 and mergedNumbers <=50:
+  print(f"Your score is {mergedNumbers}, you are alright together.")
+else:
+  print(f"Your score is {mergedNumbers}.")
 
