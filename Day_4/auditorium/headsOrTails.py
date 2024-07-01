@@ -25,3 +25,8 @@ if randomNumber == 1:
   print("Heads")
 else:
   print("Tails")
+
+
+states_of_america = ["Delaware", "Pennsylvania"]
+
+print(states_of_america[1])
