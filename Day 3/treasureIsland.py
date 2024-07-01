@@ -1,4 +1,4 @@
-from treasureIslandObjects import welcome, axe, dog, sword, cave, troll, tree, tunnel, gameOver, safeMarging
+from treasureIslandObjects import welcome, axe, dog, sword, cave, troll, tree, tunnel, gameOver, safeMarging, soundwave
 import time
 welcome()
 
@@ -11,6 +11,7 @@ if start =="y":
         tree()
         forrest = input("You see a forrest, do you want to walk and go find some shelter? Y/N \n").lower()
         if forrest == "y":
+           soundwave()
            foundDog = input("You can hear a weird sound, want to go see what is the sound? Y/N \n").lower()
            if foundDog == "y":
                print("You found a small dog called Wolfie, you found the treasure in the island. \n")
