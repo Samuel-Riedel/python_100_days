@@ -7,6 +7,7 @@ objectList = [rock,paper,scissors]# this will be printed depending on the user i
 
 number_index = int(position) #this code converts the input into an int
 show = objectList[number_index]# show uses the variable number_index to pick the user input and print the object from the list
+print(show)
 if position == "0":
     print("###################\nYou picked Rock\n###################")
 elif position == "1":
@@ -15,7 +16,7 @@ elif position == "2":
         print("###################\nYou picked Scissors\n###################")
 
 randomNumber = random.randint(0,2)
-print(randomNumber)
+#print(randomNumber)
 if randomNumber == 0:
     print("###################\nBot picked Rock\n###################")
 elif randomNumber == 1:
