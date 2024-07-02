@@ -1,0 +1,2 @@
+Create modules for each function on the rock paper scissor game
+and put them on the main.py
