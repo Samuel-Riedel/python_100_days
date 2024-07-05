@@ -22,68 +22,19 @@ nr_numbers = int(input(f"How many numbers would you like?\n"))
 randomizerLetters= random.sample(letters,nr_letters)
 randomizerNumbers= random.sample(numbers,nr_numbers)
 randomizerSymbols= random.sample(symbols,nr_symbols)
-saved = []
 
 storage = randomizerLetters+randomizerNumbers+ randomizerSymbols
-countStorage = len(storage)
 
 if question =="n":
         for i in storage:
             for x in i:
-                saved = x
-                randomGenerator = print(x, end ="")
+                randomGenerator = x
 if question == "y":
      random.shuffle(storage)
 password = ''.join(storage)
 
 print(f"This is your password: {password}")
 
-
-
-
-"""
-berga = random.choice(shuffleGenerator)
-print(type(berga))
-random.sample(berga,2)
-print(berga) 
-                   
-                    
-                     
-                      
-shuffleGenerator = list(j)
-storedList = []
-storedList = shuffleGenerator
-fix = list(storedList)
-print("".join(fix))
-
-storedList = []
-                    storedList.append(j)
-                    for t in storedList:
-                           storedList = "".join(t)
-                    
-
-print(storedList)
-
-
-
-def randomList():
-                        string = []
-                        randomStorage = list(storage)
-                        for i in randomStorage:
-                                print(type(string))
-                                string.extend(i)
-                                return string
-                        print(string)
-print(randomList())
-
- for i in storage:
-          for x in i:
-                storedList = x
-                random.choices(storedList)
-                listList = list(storedList)
-                saved.append(listList)
-"""
-                    
 
                  
 
