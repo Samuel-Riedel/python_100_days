@@ -23,7 +23,7 @@ randomizerLetters= random.sample(letters,nr_letters)
 randomizerNumbers= random.sample(numbers,nr_numbers)
 randomizerSymbols= random.sample(symbols,nr_symbols)
 
-storage = randomizerLetters+randomizerNumbers+ randomizerSymbols
+storage = randomizerLetters+randomizerNumbers+randomizerSymbols
 
 if question =="n":
         for i in storage:
