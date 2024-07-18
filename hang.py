@@ -70,24 +70,28 @@ for x in range(len(chosen_word)): # this loop takes the length of the variable c
 
 #-------------------------------------------------------------------------#
 
-while space in display is not False or end_Game is True: # this while loop will the code indented below while the underscores variable is not False
+while space in display is not False: # this while loop will the code indented below while the underscores variable is not False
     guess = input("Please select one letter from the alphabet:\n").lower() #This variable stores the input the users does in a variable guess which is used to check if its correct or wrong
 
-    print(f"Hello the space is still here ") # Testing 
     for position in range(0,len(chosen_word)):
         letter = chosen_word[position]
-        if letter == guess:
-            display[position] = letter
+    if letter == guess:
+        display[position] = letter
         
-        elif letter != guess:
+    if letter != guess:
+        lives = lives -1
+        print(lives)
+        print(stages[lives])
 
-            lives = lives -1
-
-        elif lives <=0:
-             end_Game = True
-
-
-
+    if lives <=0:
+        print("Game Over, you dont have any more attempts")
+        break
     print(display)
+
+
+
+   
+
 #-------------------------------------------------------------------------#
-print(stages[lives])
+
+
