@@ -94,4 +94,5 @@ while space in display is not False: # this while loop will the code indented be
 
 #-------------------------------------------------------------------------#
 
+print(display)
 
