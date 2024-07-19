@@ -1,6 +1,7 @@
 import random
+from wordsModule import words
 
-words = ["adidas","comida","pizza","hola"]#This list stores words to be picked randomly
+#words = ["adidas","comida","pizza","hola"]#This list stores words to be picked randomly
 display = []# this stores all the underscores and is equal to the amount of the chosen_word variable
 space = "_"#This variable is used to check in the while loop if it has "_" in display list
 chosen_word = random.choice(words) # this selects a random word from the list called words this is step 2
@@ -79,17 +80,19 @@ while space in display is not False: # this while loop will the code indented be
         if letter == guess:
             display[position] = letter
             savedLetter = chosen_word[position]
+            print(f"The letter {guess.upper()} is in the word!")
+
 
 
 # Each time the user gets a wrong letter it subtract a life from the variable lives       
     if savedLetter != guess: 
+        print(f"The letter {guess.upper()} is not in the current word")
         lives = lives -1
-        print(lives)
+        print(f"You currently have {lives} lifes left.")
         print(stages[lives])
         
 # If the lives go down to  zero this code will execute and print line 92
     if lives <=0: 
-        print("Game Over, you dont have any more attempts")
         print("""┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼
 ███▀▀▀██┼███▀▀▀███┼███▀█▄█▀███┼██▀▀▀
 ██┼┼┼┼██┼██┼┼┼┼┼██┼██┼┼┼█┼┼┼██┼██┼┼┼
@@ -104,6 +107,9 @@ while space in display is not False: # this while loop will the code indented be
 ███▄▄▄███┼┼┼─▀█▀┼┼─┼██▄▄▄┼██┼┼┼┼┼██▄
 ┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼
 """)
+        print("You dont have any more attempts")
+        print(f"    The word was {chosen_word}")
+
         break
 # When the user guesses all the letters it will print line 97 and end the game
     if space not in display:
