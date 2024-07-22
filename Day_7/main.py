@@ -1,7 +1,6 @@
 import random
 from wordsModule import words
-from hangManArt import stages
-from hangManArt import logo
+from hangManArt import stages,logo
 
 #words = ["adidas","comida","pizza","hola"]#This list stores words to be picked randomly
 display = []# this stores all the underscores and is equal to the amount of the chosen_word variable
