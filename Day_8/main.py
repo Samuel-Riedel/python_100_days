@@ -5,7 +5,7 @@ text = input("Type your message:\n").lower()
 shift = int(input("Type the shift number:\n"))
 encoded_word = []
 
-if text == "encode":
+if direction == "encode":
     def encrypt(text,shift):
         for i in text:
             index_text = alphabet.index(i)
@@ -13,6 +13,7 @@ if text == "encode":
             encoded_word.append(alphabet[index_text])
             #print(f"The encoded message is: {alphabet[index_text]}")
         print("".join(encoded_word))
+
     encrypt(text,shift)
 
 
