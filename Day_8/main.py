@@ -13,10 +13,15 @@ def encrypt(text,shift):
         encoded_word.append(alphabet[index_text])
         #print(f"The encoded message is: {alphabet[index_text]}")
     print("".join(encoded_word))
+
+
+
+def decrypt(text,shift):
+    for i in text:
+        index_text = alphabet.index(i)
+        index_text -= shift 
+        encoded_word.append(alphabet[index_text])
+        #print(f"The encoded message is: {alphabet[index_text]}")
     print("".join(encoded_word))
 
-        
-
-encrypt(text,shift)
-
-
+decrypt(text,shift)
