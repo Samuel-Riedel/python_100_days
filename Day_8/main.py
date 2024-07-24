@@ -5,25 +5,51 @@ text = input("Type your message:\n").lower()
 shift = int(input("Type the shift number:\n"))
 encoded_word = []
 
-if direction == "encode":
-    def encrypt(text,shift):
-        for i in text:
-            index_text = alphabet.index(i)
-            index_text += shift 
-            encoded_word.append(alphabet[index_text])
-            #print(f"The encoded message is: {alphabet[index_text]}")
-        print("".join(encoded_word))
-
-    encrypt(text,shift)
+"""def encrypt(text,shift):
+    for i in text:
+        index_text = alphabet.index(i)
+        index_text += shift 
+        encoded_word.append(alphabet[index_text])
+        #print(f"The encoded message is: {alphabet[index_text]}")
+    print("".join(encoded_word))
 
 
-elif direction == "decrypt":
-    def decrypt(text,shift):
+def decrypt(text,shift):
         for i in text:
             index_text = alphabet.index(i)
             index_text -= shift 
             encoded_word.append(alphabet[index_text])
             #print(f"The encoded message is: {alphabet[index_text]}")
-        print("".join(encoded_word))
+        print("".join(encoded_word))"""
 
-    decrypt(text,shift)
+
+def caesar(text,shift):
+    for i in text:
+        index_text = alphabet.index(i)
+        if direction == "encode":
+            index_text += shift 
+            encoded_word.append(alphabet[index_text])
+            #print(f"The encoded message is: {alphabet[index_text]}")
+        if direction == "decrypt":
+            index_text -= shift 
+            encoded_word.append(alphabet[index_text])
+            #print(f"The encoded message is: {alphabet[index_text]}")
+    print("".join(encoded_word))
+
+caesar(text,shift)
+
+
+
+
+
+
+
+
+
+
+"""if direction == "encode":
+    encrypt(text,shift)
+
+
+elif direction == "decrypt":
+    decrypt(text,shift)"""
