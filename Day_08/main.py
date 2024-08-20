@@ -21,17 +21,19 @@ def caesar(text,shift,direction):
     
 
 
-while start:
-    direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
-    text = input("Type your message:\n").lower()
-    shift = int(input("Type the shift number:\n"))
+def programExe():
 
-    caesar(text, shift, direction)
-
-    continueExe = input("Do you want to run the program again? Type Yes or No\n").lower()
+    continueExe = input("Do you want to run the program again? Type Yes or No").lower()
 
     if continueExe == "no":
-        start = False
-    elif continueExe == "yes":
-        start = True
+            start == False
+            
+    if continueExe == "yes":
+            start == True
+            text = input("Type your message:\n").lower()
+
+while start is not False:
+    caesar(text,shift,direction)
+    programExe()
+ 
         

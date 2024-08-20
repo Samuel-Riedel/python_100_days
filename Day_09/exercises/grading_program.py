@@ -18,12 +18,3 @@ for value in student_scores:
         print(f"{value}'s Grade = Exceeds Expectations")
     elif student_grades[value] > 91:
         print(f"{value}'s Grade = Outstanding" )
-
-        print(value)
-
-
-
-
-
-    #print(student_grades[value]) # Key o Nombres del alumno
-    #print(student_scores[value]) # Values o Notas del alumno
