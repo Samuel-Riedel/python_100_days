@@ -13,8 +13,6 @@ while answer == "yes":
 
 
     if answer == "no":
-
-        print("The Highest Bidder is:\n")
         highest_bidder = max(dictionary, key=dictionary.get)
         highest_bid = dictionary[highest_bidder]
     
@@ -24,7 +22,6 @@ while answer == "yes":
     elif answer == "yes":
         pass
 
-    
 
 
 
