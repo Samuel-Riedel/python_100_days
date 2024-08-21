@@ -1,8 +1,8 @@
 
 execution = True
 
-
 while execution == True:
+
     firstNumber = int(input("Please type the first number for your operation:\n"))
 
     operation = input("Please select your type of operation, it can be:\n+ = Add\n- = Subtract\n* = Multiply\n/ = Divide\n")
@@ -30,11 +30,18 @@ while execution == True:
                 "*": multiplyNumbers,
                 "/": divideNumbers}
 
+
     result = aritmetica[f"{operation}"](firstNumber,secondNumber)
     print(result)
-    execution = False
+    
 
-
+    question = input("Would you like to continue? Yes/No\n")
+    if question == "no":
+        print("I Will Stop Execution")
+        execution = False
+    elif question == "yes":
+        print("I will Continue Execution")
+        execution = True
 
 
 """
