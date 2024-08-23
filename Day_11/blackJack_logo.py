@@ -9,5 +9,5 @@ def blackJackCards():
                 |____V||  |  || \ / |
                        |____V||  .  |
                               |____V|
-
+----WELCOME TO BLACKJACK CASINO!-----
 """)

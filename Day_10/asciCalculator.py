@@ -16,4 +16,3 @@ def calculator():
 |_____________________|
           """)
     
-calculator()
