@@ -54,7 +54,7 @@ def userCardGenerator():
             print(f"You lost! you have {sumUser}")
             execution = False
         if sumUser <= 21:
-            drawCard = input("would you like to draw another card? Yes/No")
+            drawCard = input("would you like to draw another card? Yes/No\n")
             if drawCard == "yes": # I think i need to create a loop here so the cards keeps appearing on the print in line 54 
                                   # also might create a function and import it since its making to long the code to read 
                 user.append(randomCardGenerator)
@@ -65,11 +65,15 @@ def userCardGenerator():
                 for i in range(len(user)):
                     print(f"Your card is a {user[i]} of {randomSymbol}")
                 print(f"Your total is: {sumUser}")
-                print(f"The NPC has the cards {npc[0]} of {randomSymbol} and {npc[1]} of {randomSymbol}")
+                print("\n"*1)
+                print(f"The NPC has the cards {npc[0]} of {random.choice(symbol)} and {npc[1]} of {randomSymbol}")
                 print(f"NPCs has total of {sum(npc)}")
+                print("\n"*2)
                 if sum(npc) > sumUser and sum(npc) < 21:
                     print("NPC Won")
-                else:
+                if sum(npc) == sumUser:
+                    print("its a Draw!")
+                if sumUser > sum(npc) and sumUser < 21:
                     print("You won!!!!")
                 break
 
@@ -80,6 +84,6 @@ userCardGenerator()
 
 
 
-
+#TODO: Fix the symbol generation on cards for user
 
 
