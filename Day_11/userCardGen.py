@@ -1,38 +1,7 @@
-from blackJack_logo import blackJackCards
-#from userCardGen import userCardGenerator
 import random
-
-
-blackJackCards()
 
 cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
 symbol = ['♥ Hearts', '♦ Diamonds', '♣ Trebol', '♠ Spades']
-
-npc = []
-
-#randomNumber = int(random.random)#no se usa esta linea
-
-def npcCardGenerator():
-    sumNpc = sum(npc)
-
-    """Function generates a random number for the NPC and checks if it got
-       Blackjack before User gets it."""
-#--------------------------------------------------------
-
-    for i in range(2):
-        randomCardGenerator = random.choice(cards)
-        npc.append(randomCardGenerator)
-#---------------------------------------------------------
-        if sumNpc == 21:
-            print("BlackJack! NPC Won!")
-            break # Program will stop executing if NPC gets Blackjack before User
-        
-    print(f"NPC has the card: {npc[0]} and hidng the other one")#Prints the randomly picked cards 
-    print(f"Making it a total of: {npc[0]}")# Prints the sum of both cards
-    print("\n"*3) 
-
-#----------------------------------------------------------------------------------------------------
-#I need to fix the user part, i left where its trying to get a third card and sum it making it total of the cards---------
 
 def userCardGenerator():
     """Function  picks two random  numbers from list and generates a sum to if user gets Blackjack."""
@@ -65,21 +34,6 @@ def userCardGenerator():
                 for i in range(len(user)):
                     print(f"Your card is a {user[i]} of {randomSymbol}")
                 print(f"Your total is: {sumUser}")
-                print(f"The NPC has the cards {npc[0]} of {randomSymbol} and {npc[1]} of {randomSymbol}")
-                print(f"NPCs has total of {sum(npc)}")
-                if sum(npc) > sumUser and sum(npc) < 21:
-                    print("NPC Won")
-                else:
-                    print("You won!!!!")
+
+                    #print(f"Your cards are {user[i]} xxxx")
                 break
-
-
-
-npcCardGenerator()
-userCardGenerator()
-
-
-
-
-
-
