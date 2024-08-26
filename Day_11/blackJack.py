@@ -6,7 +6,7 @@ import random
 blackJackCards()
 
 cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
-symbol = ['♥ Hearts', '♦ Diamonds', '♣ Trebol', '♠ Spades']
+symbol = ['♥ Hearts', '♦ Diamonds', '♣ Clover', '♠ Spades']
 
 npc = []
 
@@ -63,10 +63,10 @@ def userCardGenerator():
                 print(f"Making it a total of: {sumUser}")
             elif drawCard == "no":
                 for i in range(len(user)):
-                    print(f"Your card is a {user[i]} of {randomSymbol}")
+                    print(f"Your card is a {user[i]} of {random.choice(symbol)}")
                 print(f"Your total is: {sumUser}")
                 print("\n"*1)
-                print(f"The NPC has the cards {npc[0]} of {random.choice(symbol)} and {npc[1]} of {randomSymbol}")
+                print(f"The NPC has the cards {npc[0]} of {random.choice(symbol)} and {npc[1]} of {random.choice(symbol)}")
                 print(f"NPCs has total of {sum(npc)}")
                 print("\n"*2)
                 if sum(npc) > sumUser and sum(npc) < 21:
