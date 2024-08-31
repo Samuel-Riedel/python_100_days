@@ -84,6 +84,6 @@ userCardGenerator()
 
 
 
-#TODO: Fix the symbol generation on cards for user
+
 
 
