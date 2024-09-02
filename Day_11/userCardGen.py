@@ -34,6 +34,7 @@ def userCardGenerator():
                 for i in range(len(user)):
                     print(f"Your card is a {user[i]} of {randomSymbol}")
                 print(f"Your total is: {sumUser}")
+                print(f"The NPc has the cards {npc[0]} and {npc[1]}")
 
                     #print(f"Your cards are {user[i]} xxxx")
                 break
