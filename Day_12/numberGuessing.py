@@ -22,6 +22,10 @@ def normal():
             print("You guessed the wrong number, try again!")
             LIFES = LIFES -1
             print(f"You have {LIFES} lifes left!")
+            if userNumber >  RANDOMNUMBER:
+                print("Your number is too high!")
+            elif userNumber <  RANDOMNUMBER:
+                print("Your number is too low!")
 
 #This is the function hard
 def hard():
@@ -39,6 +43,10 @@ def hard():
             print("You guessed the wrong number, try again!")
             LIFES = LIFES -1
             print(f"You have {LIFES} lifes left!")
+            if userNumber >  RANDOMNUMBER:
+                print("Your number is too high!")
+            elif userNumber <  RANDOMNUMBER:
+                print("Your number is too low!")
 
 
 
