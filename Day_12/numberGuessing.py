@@ -9,6 +9,8 @@ DIFFICULTY = input("Which difficulty you want to play? Normal/Hard\n").lower()
 
 #This is the function normal
 def normal():
+    """Function will initialize with 10 lifes for the user"""
+
     global LIFES
     print("You have selected the normal difficulty")
 
@@ -33,6 +35,7 @@ def normal():
 
 #This is the function hard
 def hard():
+    """Function will initialize with 5 lifes for the user"""
     global LIFES
     LIFES = 5
     print("You have selected the hard difficulty\n")
