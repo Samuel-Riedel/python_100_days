@@ -61,7 +61,6 @@ def hard():
 
 
 #This code will execute one of the functions depending on the user input "normal or hard"
-
 if DIFFICULTY == "normal":
     normal()
 else:
