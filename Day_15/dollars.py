@@ -38,3 +38,5 @@ def total_pennies():
         print(total_pennies)
         global TOTAL_LIST
         TOTAL_LIST.append(total_pennies)
+
+
