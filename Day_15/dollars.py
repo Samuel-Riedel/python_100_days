@@ -1,3 +1,5 @@
+TOTAL_LIST = []
+
 def total_quarters():
         QUARTERS = 0.25
         user_quarters = int(input("please how many quarters?"))
