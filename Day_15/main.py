@@ -38,9 +38,22 @@ while COFFEE_POWER == True:
 
 
     if user_coffee == "latte":
+        latte_water = int(MENU["latte"]["ingredients"]["water"])
+        latte_milk = int(MENU["latte"]["ingredients"]["milk"])
+        latte_coffee = int(MENU["latte"]["ingredients"]["coffee"])
+
+        resources_water = int(resources["water"])
+        resources_milk = int(resources["milk"])
+        resources_coffee = int(resources["coffee"])
+
+        latte_resources = latte_water + latte_coffee + latte_coffee
+        print(latte_resources)
+
         user_return_money = total - 2.5
         print(f"Your total credits are: {total}")
         print(f"The price is {MENU["latte"]["cost"]} and your total money back is: {user_return_money}")
+        print(f"Our remaining resources are: Water: {resources_water - latte_water}, Milk: {resources_milk - latte_milk}, Coffee: {resources_coffee - latte_coffee}")
+
 
 
     
@@ -48,6 +61,7 @@ while COFFEE_POWER == True:
 
 
 #TODO 
+# need to create a module or function to clean my main.py on the part where im calling the if about latte dictionary 
 # Need to create the if for report i want to import it from the file inventory
 # Turn off coffee machine
 # Reset List after the user has payed for the coffee
