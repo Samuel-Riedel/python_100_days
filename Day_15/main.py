@@ -34,7 +34,11 @@ while COFFEE_POWER == True:
     #COFFEE_POWER = False
 
     total = sum(TOTAL_LIST)
-    print(total)
+
+
+    if total < MENU[f"{user_coffee}"]["cost"]:
+        print(f"Not Enough Money!")
+        break
 
 
     if user_coffee == "latte":
@@ -46,13 +50,16 @@ while COFFEE_POWER == True:
         resources_milk = int(resources["milk"])
         resources_coffee = int(resources["coffee"])
 
-        latte_resources = latte_water + latte_coffee + latte_coffee
-        print(latte_resources)
+        remaining_water = resources_water - latte_water
+        remaining_milk = resources_milk - latte_milk
+        remaining_coffee = resources_coffee - latte_coffee
 
         user_return_money = total - 2.5
         print(f"Your total credits are: {total}")
         print(f"The price is {MENU["latte"]["cost"]} and your total money back is: {user_return_money}")
-        print(f"Our remaining resources are: Water: {resources_water - latte_water}, Milk: {resources_milk - latte_milk}, Coffee: {resources_coffee - latte_coffee}")
+        print(f"Our remaining resources are: Water: {remaining_water}, Milk: {remaining_milk}, Coffee: {remaining_coffee}")
+    
+    
 
 
 
