@@ -1,5 +1,5 @@
 from dollars import total_quarters, total_dimes,total_nickles,total_pennies, TOTAL_LIST
-#from inventory import resources
+from inventory import resources, MENU
 #create a print welcoming  print for the user **
 print("Welcome user to the Coffee Machine")
 
@@ -31,12 +31,19 @@ while COFFEE_POWER == True:
     total_dimes()
     total_nickles()
     total_pennies()
-    COFFEE_POWER = False
-
+    #COFFEE_POWER = False
 
     total = sum(TOTAL_LIST)
     print(total)
 
+
+    if user_coffee == "latte":
+        user_return_money = total - 2.5
+        print(f"Your total credits are: {total}")
+        print(f"The price is {MENU["latte"]["cost"]} and your total money back is: {user_return_money}")
+
+
+    
 
 
 
@@ -45,10 +52,3 @@ while COFFEE_POWER == True:
 # Turn off coffee machine
 # Reset List after the user has payed for the coffee
 # create the dictionary with prices of each coffee
-
-
-
-
-
-
-
