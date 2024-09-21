@@ -40,3 +40,4 @@ def total_pennies():
         TOTAL_LIST.append(total_pennies)
 
 
+

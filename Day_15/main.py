@@ -14,47 +14,51 @@ print("Welcome user to the Coffee Machine")
 
 #This variable will control if the coffee is turned off or on, it will be used a condition for the while loop**
 
-QUARTERS = 0.25
-DIMES = 0.10
-NICKLES = 0.05
-PENNIES = 0.01
 
 COFFEE_POWER = True
 
 
 while COFFEE_POWER == True:
     user_coffee = input("What would you like to drink? (Espresso / Latte / Cappuccino)").lower()
+    if user_coffee =="report": # Created this early if statement so admin can access remaining resources by typing "report"
+        print(f"Our remaining resources are: Water: {int(resources["water"])}, Milk:{int(resources["milk"])}, Coffee: {int(resources["coffee"])}")
+        break
+
     print(f"You have selected {user_coffee}, please wait while we server your order.")
     print("Please Insert Coins.")
 
+    
     total_quarters()
     total_dimes()
     total_nickles()
     total_pennies()
-    #COFFEE_POWER = False
-
+    
     total = sum(TOTAL_LIST)
 
+    coffee_water = int(MENU[f"{user_coffee}"]["ingredients"]["water"])
+    coffee_coffee = int(MENU[f"{user_coffee}"]["ingredients"]["coffee"])
+    coffee_milk = int(MENU[f"{user_coffee}"]["ingredients"]["milk"])
+
+    resources_water = int(resources["water"])
+    resources_milk = int(resources["milk"])
+    resources_coffee = int(resources["coffee"])
+
+    remaining_water = resources_water - coffee_water
+    remaining_milk = resources_milk - coffee_milk
+    remaining_coffee = resources_coffee - coffee_coffee
 
     if total < MENU[f"{user_coffee}"]["cost"]:
         print(f"Not Enough Money!")
         break
 
+    if user_coffee == "latte" or user_coffee == "cappuccino":
+        user_return_money = total - MENU[user_coffee]["cost"]
+        print(f"Your total credits are: {total}")
+        print(f"The price is {MENU["latte"]["cost"]} and your total money back is: {user_return_money}")
+        print(f"Our remaining resources are: Water: {remaining_water}, Milk: {remaining_milk}, Coffee: {remaining_coffee}")
 
-    if user_coffee == "latte":
-        latte_water = int(MENU["latte"]["ingredients"]["water"])
-        latte_milk = int(MENU["latte"]["ingredients"]["milk"])
-        latte_coffee = int(MENU["latte"]["ingredients"]["coffee"])
-
-        resources_water = int(resources["water"])
-        resources_milk = int(resources["milk"])
-        resources_coffee = int(resources["coffee"])
-
-        remaining_water = resources_water - latte_water
-        remaining_milk = resources_milk - latte_milk
-        remaining_coffee = resources_coffee - latte_coffee
-
-        user_return_money = total - 2.5
+    if user_coffee == "espresso":
+        user_return_money = total - MENU[user_coffee]["cost"]
         print(f"Your total credits are: {total}")
         print(f"The price is {MENU["latte"]["cost"]} and your total money back is: {user_return_money}")
         print(f"Our remaining resources are: Water: {remaining_water}, Milk: {remaining_milk}, Coffee: {remaining_coffee}")
